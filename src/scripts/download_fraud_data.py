@@ -19,7 +19,7 @@ def load_and_extract(file_id, zip_filepath, out_dir):
     )
 
     with zipfile.ZipFile(zip_filepath, 'r') as zip_file:
-        zip_file.extractall()
+        zip_file.extractall(out_dir)
 
 
 if __name__ == '__main__':
