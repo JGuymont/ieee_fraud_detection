@@ -16,8 +16,7 @@ def convert_csv_to_hdf(path_in, path_out, categorical_features):
 
     print(' > Converting categorical features...')
     for feature in categorical_features:
-        dataframe[feature] = dataframe[feature].astype('category').cat.codes
-        dataframe[feature] = dataframe[feature].astype('category').cat.codes
+        dataframe[feature] = dataframe[feature].astype('category')
     print(' > done')
 
     print(' > Converting numerical features...')
