@@ -7,8 +7,12 @@ DATA_DIR = './data/interim/'
 TRAIN_IDENTITY_ID = '1ablR0JkfExUWdvSWKZPO6ZRxsR_XRIIp'
 TRAIN_TRANSACTION_ID = '1km69I5XBUT1MWjTvr0y514x6DdKpHUvF'
 
+TEST_TRANSACTION_ID = '1V5oZtGscXneNHMX5mDcFut-y6AKVgIo_'
+
 TRAIN_IDENTITY_ZIP_FILEPATH = './data/interim/train_identity.zip'
 TRAIN_TRANSACTION_ZIP_FILEPATH = './data/interim/train_transaction.zip'
+
+TEST_TRANSACTION_ZIP_FILEPATH = './data/interim/test_transaction.zip'
 
 
 def load_and_extract(file_id, zip_filepath, out_dir):
@@ -25,3 +29,4 @@ def load_and_extract(file_id, zip_filepath, out_dir):
 if __name__ == '__main__':
     load_and_extract(TRAIN_IDENTITY_ID, TRAIN_IDENTITY_ZIP_FILEPATH, DATA_DIR)
     load_and_extract(TRAIN_TRANSACTION_ID, TRAIN_TRANSACTION_ZIP_FILEPATH, DATA_DIR)
+    load_and_extract(TEST_TRANSACTION_ID, TEST_TRANSACTION_ZIP_FILEPATH, DATA_DIR)
